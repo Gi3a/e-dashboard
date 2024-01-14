@@ -7,12 +7,12 @@
     "module": true,
     "resourceType": "script"
   },
-  "/Users/gizatuteyev/Desktop/e-dashboard/node_modules/nuxt/dist/app/entry.js": {
+  "C:/Users/Asus/Desktop/Dev/e-dashboard/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
-    "file": "/Users/gizatuteyev/Desktop/e-dashboard/node_modules/nuxt/dist/app/entry.js"
+    "file": "C:/Users/Asus/Desktop/Dev/e-dashboard/node_modules/nuxt/dist/app/entry.js"
   }
 }
