@@ -48,8 +48,8 @@ watch(selectedBusiness, (newBusiness) => {
     <Dialog v-model:open="showNewBusinessDialog">
         <Popover v-model:open="open">
             <PopoverTrigger as-child>
-                <Button variant="outline" role="combobox" aria-expanded="open" aria-label="Select a business"
-                    :class="cn('w-[300px] justify-between', $attrs.class ?? '')">
+                <Button variant="ghost" role="combobox" aria-expanded="open" aria-label="Select a business"
+                    :class="cn('w-[auto] justify-between', $attrs.class ?? '')">
                     <Avatar class="mr-2 h-5 w-5">
                         <AvatarImage :src="`https://avatar.vercel.sh/${selectedBusiness.id}.png`"
                             :alt="selectedBusiness.name" />
@@ -59,7 +59,7 @@ watch(selectedBusiness, (newBusiness) => {
                     <Icon name="radix-icons:caret-sort" class="ml-auto h-4 w-4 shrink-0 opacity-50" />
                 </Button>
             </PopoverTrigger>
-            <PopoverContent class="w-[300px] p-0">
+            <PopoverContent class=" p-0">
                 <Command :filter-function="(list, term) => list.filter(i => i.name?.toLowerCase()?.includes(term))">
                     <CommandList>
                         <CommandInput placeholder="Search business..." />

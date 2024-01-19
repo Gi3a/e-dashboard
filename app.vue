@@ -1,7 +1,14 @@
 <template>
-  <div>
+  <main :class="theme">
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage class="bg-background" />
     </NuxtLayout>
-  </div>
+  </main>
 </template>
+
+<script setup lang="ts">
+
+const store = useGeneralStore();
+
+const theme = computed(() => store.theme);
+</script>

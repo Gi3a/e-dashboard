@@ -14,8 +14,10 @@ export const useAppointmentStore = defineStore('appointment', () => {
 
     // Get Appointments (including filters)
 
-  
+
     return {
         filteredAppointments
     }
-  })
+},
+    { persist: true }
+);

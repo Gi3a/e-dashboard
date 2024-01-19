@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'shadcn-nuxt',
     '@nuxtjs/supabase',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@pinia-plugin-persistedstate/nuxt',
   ],
   components: [
     {
@@ -21,10 +22,6 @@ export default defineNuxtConfig({
     },
   ],
   supabase: {
-    redirectOptions: {
-      login: '/login',
-      callback: '/confirm',
-      exclude: [],
-    }
+    redirect: false,
   },
 })

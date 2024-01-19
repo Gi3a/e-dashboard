@@ -27,4 +27,6 @@ export const useBusinessStore = defineStore('business', () => {
         setSelectedBusiness,
         getAllBusinessess
     }
-})
+},
+    { persist: true }
+);

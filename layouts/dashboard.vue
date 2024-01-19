@@ -1,6 +1,6 @@
 <template>
-    <Navigation />
-    <main>
+    <Menu />
+    <div class="border-t">
         <slot />
-    </main>
+    </div>
 </template>
