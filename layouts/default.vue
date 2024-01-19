@@ -1,9 +1,5 @@
 <template>
-    <main>
-        <div class="border-t">
-            <div class="bg-background">
-                <slot />
-            </div>
-        </div>
-    </main>
+    <div class="border-t">
+        <slot />
+    </div>
 </template>

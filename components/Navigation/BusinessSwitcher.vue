@@ -7,23 +7,6 @@ import { cn } from '@/lib/utils'
 const user = useSupabaseUser();
 const businessStore = useBusinessStore();
 
-const businesses = ref([]);
-const user_id: any = user?.value?.id;
-
-// Fetch businesses and update the selected business
-const fetchBusinesses = async () => {
-    const response: any = await businessStore.getAllBusinessess(user_id);
-    businesses.value = response?.data;
-
-    // Initialize the selectedBusiness with the first business if available
-    if (businesses.value.length > 0) {
-        selectedBusiness.value = businesses.value[0];
-        businessStore.setSelectedBusiness(businesses.value[0]);
-    }
-}
-// Fetch businesses on component mount
-onMounted(fetchBusinesses);
-
 interface Business {
     id: string;
     name: string;

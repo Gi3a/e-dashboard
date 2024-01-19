@@ -20,3 +20,11 @@ definePageMeta({
 
 const user = useSupabaseUser();
 </script>
+
+<!--
+    
+    при заходе на дэшборд получить все данные (сотрудинокв, специалистов) через useAsyncData
+    1. Получить все appointment
+    2. Вставить данные из стора
+
+-->
