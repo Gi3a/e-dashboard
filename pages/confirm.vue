@@ -1,19 +1,31 @@
 <script setup lang="ts">
 
+const client = useSupabaseClient();
 const user = useSupabaseUser();
 const businessStore = useBusinessStore();
+const specialistStore = useSpecialistStore();
+
+const logout = async () => {
+    await client.auth.signOut();
+    navigateTo("/login");
+};
 
 
-const user_id: any = user?.value?.id;
 
 // Fetch Businesses
+const user_id: any = user?.value?.id;
 const fetchBusinesses = async () => {
     const response: any = await businessStore.getAllBusinessess(user_id);
 }
-
 await fetchBusinesses();
 
-console.log(businessStore.selectedBusiness)
+// Fetch Specialists
+const current_business: any = businessStore.selectedBusiness.id;
+const fetchSpecialists = async () => {
+    const response: any = await specialistStore.getAllSpecialists(current_business);
+}
+await fetchSpecialists();
+
 
 // navigateTo("/");
 </script>
@@ -28,7 +40,7 @@ console.log(businessStore.selectedBusiness)
         Businesses
     </span>
     <br />
-    <NuxtLink to="/">
-        Initializing...
-    </NuxtLink>
+    <Button @click="logout">
+        Again
+    </Button>
 </template>
